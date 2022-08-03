@@ -6,7 +6,7 @@
     <title>Unity WebGL Player | Auburn Online Molecule Viewer</title>
   </head>
   <body style="text-align: center">
-    <canvas id="unity-canvas" width=960 height=540 style="width: 960px; height: 540px; background: #231F20"></canvas>
+    <canvas id="unity-canvas" width=600 height=600 style="width: 600px; height: 600px; background: #231F20"></canvas>
     <script src="Build/ch4_testbuild.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
@@ -18,13 +18,13 @@
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/ch4_testbuild.data",
-        frameworkUrl: "Build/ch4_testbuild.framework.js",
-        codeUrl: "Build/ch4_testbuild.wasm",
+        dataUrl: "Build/ch4_testbuild.data.unityweb",
+        frameworkUrl: "Build/ch4_testbuild.framework.js.unityweb",
+        codeUrl: "Build/ch4_testbuild.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Auburn Online",
         productName: "Auburn Online Molecule Viewer",
-        productVersion: "0.1.0",
+        productVersion: "0.1.1",
         // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       });
